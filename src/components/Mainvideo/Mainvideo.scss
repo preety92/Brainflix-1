@@ -1,0 +1,36 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/resets" ;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+
+.video{
+    margin: auto;
+    background-color: $brainflix-darkblack;
+    width:100%;
+    height: auto;
+    overflow:hidden;
+    position: relative;
+    background-position: center;
+
+&__poster{
+    max-width:100%;
+    height: auto;
+    margin: 0 auto;  
+    background-size: cover;
+ background-position: center;
+ display: block;
+ @include tablet-and-desktop{
+    max-width:90%; 
+    height: auto;
+    margin: 0 auto;  
+ }
+ @include desktop{
+    max-width:80%;
+    height: auto;
+    margin: 0 auto;  
+ }
+
+}
+}
+
+

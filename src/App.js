@@ -1,27 +1,26 @@
-// App.js or any other component
+import React, { useState, useEffect } from 'react';
+import videoData from "../src/Data/videos.json";
+import videoDetailsData from '../src/Data/video-details.json';
 import Header from './components/Header/Header';
 import './App.scss';
+import NextVideos from './components/Nextvideo/Nextvideo';
+import MainVideo from './components/Mainvideo/Mainvideo';
+
 
 const App = () => {
+ const [mainVideo,setMainVideo]=useState({});
+
+ useEffect(()=>{
+  setMainVideo(videoDetailsData[0]);
+ },[]);
+
   return (
-    <div className="app">
-      <Header />
-      {/* Rest of your app content */}
-    </div>
+ <div>
+  <Header />
+<MainVideo videoDetails={mainVideo}/>
+ </div>
   );
 };
 export default App;
 
-// import './App.scss';
 
-// function App() {
-
-//   return (
-    
-//     <div className="App">
-//      <h1>preety</h1>
-//     </div>
-//   );
-// }
-
-// export default App;

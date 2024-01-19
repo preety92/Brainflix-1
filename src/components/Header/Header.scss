@@ -3,10 +3,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography";
 
-// Import partials
-// @import 'variables';
-// @import 'mixins';
-// @import 'typography';
+
 
 .header {
  @include container; 
@@ -127,7 +124,7 @@
   }
 
   &__upload-button {
-    @include button-base; // Assuming a mixin for button styles
+    @include button-base; 
     background-color:$brainflix-blue;
     color: $white;
     width: 85%;
@@ -162,7 +159,7 @@
 
 .header__search-icon{
     position: absolute;
-    right: 180px; // Default right offset
+    right: 180px; 
     cursor: pointer;
 }
 
