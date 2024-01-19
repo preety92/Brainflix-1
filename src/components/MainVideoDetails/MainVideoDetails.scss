@@ -4,20 +4,37 @@
 @import "../../styles/partials/typography";
 
 .Details{
-    padding-left:1rem;
+    padding-left:1.5rem;
 padding-right:1.5rem;
+@include desktop{
+    max-width:60%;
+    margin-left: 5rem;
+}
     &__title{
         @include page_header--mobile;
        color:$brainflix-darkblack;
         padding-top:2rem;
         padding-bottom:$padding_bwcomp--mobile;
         border-bottom:3px solid $mercury;
+        @include tablet-and-desktop{
+            @include page_header--desktop;
+            border-bottom: none;
+            padding-bottom:0;
+        }
+        @include desktop{
+@include page_header--desktop;
+        }
     }
     &__channel{
 @include section_header--mobile;
 color:$brainflix-darkblack;
 font-weight:700;
 padding-top:$padding_bwcomp--mobile;
+margin-top:$padding_bwcomp--mobile;
+@include tablet-and-desktop{
+margin-top:0;
+margin-right: $padding_bheadline--desktop;
+}
     }
     &__date{
         @include section_header--mobile;
@@ -28,6 +45,9 @@ padding-top:$padding_bwcomp--mobile;
         @include section_header--mobile;
         color:$silver;
         padding-top:$padding_bwcomp--mobile;
+        @include tablet-and-desktop{
+            margin-right: $padding_bheadline--desktop; 
+        }
     }
     &__likes{
         @include section_header--mobile;
@@ -35,18 +55,48 @@ padding-top:$padding_bwcomp--mobile;
         padding-top:$padding_bwcomp--mobile;
     }
     &__description{
-        // margin-top:3rem;
-        // padding-top:$padding_bwcomp--mobile;
-        // border-top:3px solid $mercury;
+        border-top:3px solid $mercury;
+        padding-top: $padding_bheadline--mobile;
+        @include body--mobile;
+        color:$brainflix-darkblack;
+        letter-spacing: 1px;
+        // font-size: 18px;
+        @include tablet-and-desktop{
+            @include body--desktop;
+        letter-spacing: 1px;
+
+        }
+        @include desktop{
+            @include body--desktop;
+        letter-spacing: 1px;
+
+        }
     }
     &__flex{
         margin-bottom:$padding_bheadline--mobile;
         display:flex;
         flex-direction:row;
         justify-content: space-between;
+        @include tablet-and-desktop{
+            @include section_header--desktop
+        }
+        @include desktop{
+            @include section_header--desktop
+        }
+    }
+    &__flexelement1{
+        @include tablet-and-desktop{
+            display:flex;
+            flex-direction: row;
+        }
     }
     &__flexelement2{
         margin-top:1rem;
+        @include tablet-and-desktop{
+            display:flex;
+            flex-direction: row;
+            margin-top:0;
+        }
     }
     &__subelement1{
         display:flex;
