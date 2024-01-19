@@ -14,51 +14,61 @@
     font-size:2.0625rem;
     line-height: 2.75rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin section_header--desktop{
     font-size:0.75rem;
     line-height: 1.25rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin subheader--desktop{
     font-size:0.875rem;
     line-height: 1.375rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin body--desktop{
     font-size:0.875rem;
     line-height: 1.375rem;
     font-weight: bold 400;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin label_button--desktop{
     font-size:0.75rem;
     line-height: 1.25rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin page_header--mobile{
     font-size:1.5rem;
     line-height: 2rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin section_header--mobile{
     font-size:0.75rem;
     line-height: 1.25rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin subheader--mobile{
     font-size:0.8125rem;
     line-height: 1.125rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin body--mobile{
     font-size:0.8125rem;
     line-height: 1.125rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 @mixin label_button--mobile{
     font-size:0.625rem;
     line-height: 1.25rem;
     font-weight: bold 700;
+    font-family:"Avenir Next LT Pro";
 }
 //header
 // Basic layout mixin

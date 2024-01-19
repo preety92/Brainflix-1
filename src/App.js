@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import './App.scss';
 import NextVideos from './components/Nextvideo/Nextvideo';
 import MainVideo from './components/Mainvideo/Mainvideo';
+import MainVideoDetail from './components/MainVideoDetails/MainVideoDetails';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
  <div>
   <Header />
 <MainVideo videoDetails={mainVideo}/>
+<MainVideoDetail videoDetails={mainVideo}/>
  </div>
   );
 };

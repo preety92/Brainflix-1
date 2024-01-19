@@ -1,0 +1,69 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/resets" ;
+@use "../../styles/partials/mixins" as *;
+@import "../../styles/partials/typography";
+
+.Details{
+    padding-left:1rem;
+padding-right:1.5rem;
+    &__title{
+        @include page_header--mobile;
+       color:$brainflix-darkblack;
+        padding-top:2rem;
+        padding-bottom:$padding_bwcomp--mobile;
+        border-bottom:3px solid $mercury;
+    }
+    &__channel{
+@include section_header--mobile;
+color:$brainflix-darkblack;
+font-weight:700;
+padding-top:$padding_bwcomp--mobile;
+    }
+    &__date{
+        @include section_header--mobile;
+        color:$silver;
+        padding-top:$padding_bwcomp--mobile;
+    }
+    &__views{
+        @include section_header--mobile;
+        color:$silver;
+        padding-top:$padding_bwcomp--mobile;
+    }
+    &__likes{
+        @include section_header--mobile;
+        color:$silver;
+        padding-top:$padding_bwcomp--mobile;
+    }
+    &__description{
+        // margin-top:3rem;
+        // padding-top:$padding_bwcomp--mobile;
+        // border-top:3px solid $mercury;
+    }
+    &__flex{
+        margin-bottom:$padding_bheadline--mobile;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    &__flexelement2{
+        margin-top:1rem;
+    }
+    &__subelement1{
+        display:flex;
+        flex-direction: row;
+    }
+    &__subelement2{
+        display:flex;
+        flex-direction: row;
+    }
+    &__view-icon{
+        width:25px;
+        margin-right:0.5rem;
+        margin-top:1rem;
+    }
+    &__likes-icon{
+        width:23px;
+        margin-right:0.8rem;
+        margin-top:1rem;
+    }
+}
