@@ -1,0 +1,96 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/resets" ;
+@use "../../styles/partials/mixins" as *;
+@import "../../styles/partials/typography";
+
+.commentbox{
+   margin-left:1.5rem;
+   &__heading1{
+    margin-top:1.5rem;
+    color:$brainflix-black;
+    @include page_header--mobile;
+    font-size:18px;
+    @include desktop{
+        max-width:60%;
+        margin-left: 5rem;
+    }
+   }
+   
+   &__form{
+    @include desktop{
+        max-width:60%;
+        margin-left: 5rem;
+    }
+   }
+   &__heading2{
+    @include label_button--mobile;
+    font-weight: 700;
+    margin-left:4.3rem;
+    letter-spacing: 1px;
+    color:$silver;
+    @include desktop{
+        margin-left:12rem;
+    }
+   }
+   &__logo1{
+    @include logo_person;
+   display:block;
+   margin-left:0.5rem;
+   margin-top:0.2rem;
+   }
+   &__form--imgtext{
+    display:flex;
+    flex-direction: row;
+   }
+   &__form--textdiv{
+    margin-right: 1.5rem;
+   }
+   &__textarea{
+margin-top: 0.5rem;
+width:75%;
+height:7rem;
+border:3px solid $mercury;
+padding:0.3rem;
+@include tablet-and-desktop{
+    max-width:60%;
+    height:2.5rem;
+}
+@include desktop{
+    max-width:60%;
+    margin-left: 1rem;
+    
+}
+   }
+   &__form-button{
+    margin-top:$padding_bwcomp--mobile;
+    padding:0.8rem;
+    width:75%;
+    margin-bottom:2rem;
+    margin-left: 4.3rem;
+    border:none;
+color:$white;
+background-color: $brainflix-blue;
+border-radius: 4px;
+@include section_header--mobile;
+font-size:1rem;
+font-weight: bolder;
+transition: background-color 0.2s ease-in-out;
+  
+&:hover {
+  background-color: darken($brainflix-darkblue, 10%); // Hover effect
+}
+@include tablet-and-desktop{
+    width:20%;
+    position: absolute;
+    right:1.25rem;
+    top:50.5rem;
+}
+@include desktop{
+        width:15%;
+        position: absolute;
+        right:25.25rem;
+        top:64.8rem;
+    
+}
+   }
+}
