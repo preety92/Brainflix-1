@@ -2,6 +2,9 @@ import React from "react";
 import "./MainVideoDetails.scss";
 import viewIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
+import CommentsSection from "../Comments/Comments";
+
+
 const MainVideoDetail=({videoDetails})=>{
     const convertTime=new Date(videoDetails.timestamp).toLocaleDateString();
 
@@ -25,7 +28,7 @@ const MainVideoDetail=({videoDetails})=>{
            </div>
            </div>
            <p className="Details__description">{videoDetails.description}</p>
-          
+          <CommentsSection comments={videoDetails.comments}/>
           
         </div>
     );

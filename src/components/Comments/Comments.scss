@@ -4,7 +4,13 @@
 @import "../../styles/partials/typography";
 
 .commentbox{
-   margin-left:1.5rem;
+    margin-left:0;
+   @include tablet-and-desktop{
+    margin-left:1.5rem;
+   }
+   @include desktop{
+    margin-left:0rem;
+   }
    &__heading1{
     margin-top:1.5rem;
     color:$brainflix-black;
@@ -12,14 +18,17 @@
     font-size:18px;
     @include desktop{
         max-width:60%;
-        margin-left: 5rem;
     }
    }
-   
-   &__form{
+   &__details{
+    border-top:3px solid $mercury;
+   }
+   &__form--imgt{
     @include desktop{
-        max-width:60%;
-        margin-left: 5rem;
+        max-width:30%;
+        // margin-left: 5rem;
+        margin-left: 0;  
+       
     }
    }
    &__heading2{
@@ -29,7 +38,8 @@
     letter-spacing: 1px;
     color:$silver;
     @include desktop{
-        margin-left:12rem;
+        margin-left:5rem;
+        @include section_header--desktop;
     }
    }
    &__logo1{
@@ -37,6 +47,9 @@
    display:block;
    margin-left:0.5rem;
    margin-top:0.2rem;
+   @include desktop{
+    margin-left:0;
+   }
    }
    &__form--imgtext{
     display:flex;
@@ -50,15 +63,16 @@ margin-top: 0.5rem;
 width:75%;
 height:7rem;
 border:3px solid $mercury;
-padding:0.3rem;
+padding:0.2rem;
+border-radius: 4px;
+@include section_header--desktop; 
 @include tablet-and-desktop{
-    max-width:60%;
-    height:2.5rem;
+    max-width:63%;
+    height:2.7rem;
 }
 @include desktop{
-    max-width:60%;
-    margin-left: 1rem;
-    
+    max-width:58%;
+    height:3rem;
 }
    }
    &__form-button{
@@ -77,20 +91,110 @@ font-weight: bolder;
 transition: background-color 0.2s ease-in-out;
   
 &:hover {
-  background-color: darken($brainflix-darkblue, 10%); // Hover effect
+  background-color: darken($brainflix-darkblue, 10%); 
 }
 @include tablet-and-desktop{
     width:20%;
     position: absolute;
-    right:1.25rem;
-    top:50.5rem;
+    right:2.5rem;
+    top:50.8rem;
 }
 @include desktop{
         width:15%;
         position: absolute;
-        right:25.25rem;
+        right:29rem;
         top:64.8rem;
-    
+        margin-left: 0;
 }
    }
+   &__underline{
+    height:2px;
+    width:100%;
+    color:$brainflix-black;
+   }
+   &__container{
+    margin-bottom: 1.5rem;
+    @include desktop{
+       max-width:100%;
+    }
+   }
+   &__div{
+    margin-top: 1.5rem;
+   }
+   &__logoContainer {
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    background-color: $mercury;
+    display: flex;
+    margin-right: 1rem;
+    margin-left:0;
+    @include tablet-and-desktop {
+      display: flex;
+      margin-right: 0;
+    }
+}
+&__flex{
+    display:flex;
+    flex-direction: row;
+   margin-top: 1rem;
+   
+}
+&__name{
+    @include section_header--mobile;
+    font-weight:700;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    // margin-left:2rem;
+    margin-right: 10rem;
+    white-space: nowrap;
+    overflow: hidden;  
+    @include tablet-and-desktop{
+        margin-left:1rem;
+        margin-right: 30rem;
+        white-space: nowrap;
+        overflow: hidden;   
+    }
+}
+&__comment{
+    margin-left:3rem;
+    @include section_header--mobile;
+    font-size: 1rem;
+    @include tablet-and-desktop{
+        @include body--desktop;
+    }
+    @include desktop{
+        @include body--desktop;
+        margin-left:5rem;
+    }
+
+}
+&__timestamp{
+display: flex;
+flex-direction: row;
+flex-grow: 1;
+margin-bottom:2rem;
+padding-bottom: 1rem;
+margin:auto;
+@include section_header--mobile;
+font-weight: 700;
+color:$silver;
+@include tablet-and-desktop{
+    margin-left: auto;
+    @include label_button--desktop;
+    // margin:auto;
+}
+
+}
+&__datediv{
+    display: flex;
+    flex-direction: row;
+    text-align:right;
+    margin-left: auto;
+    @include tablet-and-desktop{
+        // margin: auto;
+        margin-left: auto;
+    }
+    }
+   
 }

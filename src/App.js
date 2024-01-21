@@ -6,7 +6,7 @@ import './App.scss';
 import NextVideos from './components/Nextvideo/Nextvideo';
 import MainVideo from './components/Mainvideo/Mainvideo';
 import MainVideoDetail from './components/MainVideoDetails/MainVideoDetails';
-import CommentSection from './components/Comments/Comments';
+import CommentsSection from './components/Comments/Comments';
 
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
   <Header />
 <MainVideo videoDetails={mainVideo}/>
 <MainVideoDetail videoDetails={mainVideo}/>
-<CommentSection/>
+<CommentsSection/>
  </div>
   );
 };
