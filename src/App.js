@@ -8,40 +8,43 @@ import NextVideos from './components/Nextvideo/Nextvideo';
 import MainVideo from './components/Mainvideo/Mainvideo';
 import MainVideoDetail from './components/MainVideoDetails/MainVideoDetails';
 
-
-
 const App = () => {
- const [mainVideo,setMainVideo]=useState({});
- const [nextVideos, setNextVideos] = useState([]);
+  const [mainVideo, setMainVideo] = useState({});
+  const [nextVideos, setNextVideos] = useState([]);
 
- useEffect(() => {
-  setNextVideos(videoData);
-  setMainVideo(videoDetailsData[0]);
-}, []);
+  useEffect(() => {
+    setNextVideos(videoData);
+    setMainVideo(videoDetailsData[0]);
+  }, []);
 
- const handleNextVideoClick=(videoId)=>{
-  const filteredNextVideos=nextVideos.filter(video=>video.id !==videoId);
-  const selectedVideoDetails=videoDetailsData.find(video=>video.id===videoId);
-  setMainVideo(selectedVideoDetails);
-  setNextVideos(filteredNextVideos);
- }
+  const handleNextVideoClick = (videoId) => {
+    const selectedVideoDetails = videoDetailsData.find((video) => video.id === videoId);
+
+    setMainVideo(selectedVideoDetails);
+
+    setNextVideos((prevNextVideos) => {
+      return [...prevNextVideos, mainVideo].filter((video) => video.id !== videoId);
+    });
+  };
+
   return (
- <div>
-  <Header />
-<MainVideo videoDetails={mainVideo}/>
-<div className='App__main'>
-  <div className='App__flex1'>
-<MainVideoDetail videoDetails={mainVideo}/>
-</div>
-<div className='App__flex2'>
-<NextVideos nextVideos={nextVideos} onVideoClick={handleNextVideoClick}/>
-</div>
-</div>
-
- </div>
- 
+    <div>
+      <Header />
+      <MainVideo videoDetails={mainVideo} />
+      <div className='App__main'>
+        <div className='App__flex1'>
+          <MainVideoDetail videoDetails={mainVideo} />
+        </div>
+        <div className='App__flex2'>
+          <NextVideos nextVideos={nextVideos} onVideoClick={handleNextVideoClick} />
+        </div>
+      </div>
+    </div>
   );
 };
+
 export default App;
+
+
 
 
