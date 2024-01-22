@@ -1,3 +1,12 @@
-h1{
-    color:red;
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/resets" ;
+@use "./styles/partials/mixins" as *;
+@import "./styles/partials/typography";
+.App__main{
+    @include desktop{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    
 }

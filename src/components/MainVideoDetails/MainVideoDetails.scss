@@ -4,27 +4,26 @@
 @import "../../styles/partials/typography";
 
 .Details{
-    padding-left:1.5rem;
-padding-right:1.5rem;
-@include desktop{
-    max-width:60%;
-    margin-left: 5rem;
-}
-    &__title{
-        @include page_header--mobile;
-       color:$brainflix-darkblack;
-        padding-top:2rem;
-        padding-bottom:$padding_bwcomp--mobile;
-        border-bottom:3px solid $mercury;
-        @include tablet-and-desktop{
-            @include page_header--desktop;
-            border-bottom: none;
-            padding-bottom:0;
+ padding-left:1.5rem;
+ padding-right:1.5rem;
+ @include desktop{
+ margin-left: 5rem;
+ }
+ &__title{
+  @include page_header--mobile;
+ color:$brainflix-darkblack;
+  padding-top:2rem;
+  padding-bottom:$padding_bwcomp--mobile;
+  border-bottom:3px solid $mercury;
+ @include tablet-and-desktop{
+    @include page_header--desktop;
+  border-bottom: none;
+ padding-bottom:0;
         }
-        @include desktop{
+     @include desktop{
 @include page_header--desktop;
-        }
-    }
+   }
+ }
     &__channel{
 @include section_header--mobile;
 color:$brainflix-darkblack;
@@ -60,7 +59,6 @@ margin-right: $padding_bheadline--desktop;
         @include body--mobile;
         color:$brainflix-darkblack;
         letter-spacing: 1px;
-        // font-size: 18px;
         @include tablet-and-desktop{
             @include body--desktop;
         letter-spacing: 1px;
@@ -116,4 +114,4 @@ margin-right: $padding_bheadline--desktop;
         margin-right:0.8rem;
         margin-top:1rem;
     }
-}
+ }

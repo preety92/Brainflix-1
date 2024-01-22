@@ -70,14 +70,12 @@
     font-weight: bold 700;
     font-family:"Avenir Next LT Pro";
 }
-//header
-// Basic layout mixin
 @mixin container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; // Assuming a max-width for responsiveness
+    max-width: 1200px; 
     margin: 0 auto;
   }
   // Input base mixin
@@ -86,11 +84,11 @@
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
-    font-size: 1rem; // Assuming a default font size
-    outline: none; // Remove default outline
+    font-size: 1rem; 
+    outline: none; 
   
     &:focus {
-      border: 1px solid $primary-color; // Highlight on focus
+      border: 1px solid $primary-color; 
     }
   }
   @mixin button-base {

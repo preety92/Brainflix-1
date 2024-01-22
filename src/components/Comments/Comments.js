@@ -1,6 +1,7 @@
 import React from "react";
 import './Comments.scss';
 import presonImage from '../../assets/Images/Mohan-muruge.jpg';
+import comment from '../../assets/Icons/add_comment.svg';
 
 
 
@@ -15,15 +16,19 @@ const CommentsSection = ({ comments }) => {
         <h2 className="commentbox__heading1">3 comments</h2>
         <p className="commentbox__heading2">JOIN THE CONVERSATION</p>
 <div className="commentbox__form">
-   <div className="commentbox__form--imgtext">
+  <div className="commentbox__form--row">
       <div className="commentbox__form--imgdiv">
 <img src={presonImage} alt="persons_image" className="commentbox__logo1" />
 </div>
-<div className="commentbox__form--textdiv"></div>
+<div className="commentbox__form--textdiv">
  <textarea className="commentbox__textarea" placeholder="  Add a new comment" />
  </div>
+ </div>
  <div className="commentbox__form--buttondiv">
-<button className="commentbox__form-button"> Comment</button>
+<button className="commentbox__form-button"> Comment
+<img src={comment} alt="comment Icon" className="commentbox__upload-icon" />
+</button>
+
 </div>
 </div>
 <div className="commentbox__container">
@@ -35,7 +40,6 @@ const CommentsSection = ({ comments }) => {
                   <div className="commentbox__flex1">
                <div className="commentbox__logoContainer"></div>
                </div>
-             <div className="commentbox__underline"></div>
                <div>
               <p className="commentbox__name">{comment.name}</p>
               </div>
@@ -47,6 +51,7 @@ const CommentsSection = ({ comments }) => {
               </div>
              
               <p className="commentbox__comment">{comment.comment}</p>
+            
             </div>
           </div>
         ))}

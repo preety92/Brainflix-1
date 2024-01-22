@@ -3,12 +3,14 @@ import "./MainVideoDetails.scss";
 import viewIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 import CommentsSection from "../Comments/Comments";
+import NextVideos from "../Nextvideo/Nextvideo";
 
 
 const MainVideoDetail=({videoDetails})=>{
     const convertTime=new Date(videoDetails.timestamp).toLocaleDateString();
 
     return(
+   
         <div className="Details">
            <h1 className="Details__title">{videoDetails.title}</h1>
            <div className="Details__flex">
@@ -29,8 +31,8 @@ const MainVideoDetail=({videoDetails})=>{
            </div>
            <p className="Details__description">{videoDetails.description}</p>
           <CommentsSection comments={videoDetails.comments}/>
-          
         </div>
+        
     );
     };
     export default MainVideoDetail;

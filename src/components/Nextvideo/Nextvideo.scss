@@ -1,1 +1,57 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/resets" ;
+@use "../../styles/partials/mixins" as *;
+@import "../../styles/partials/typography";
 
+.nextVideos{
+    margin:1.5rem;
+    border-top:3px solid $mercury;
+    @include desktop{
+        border-top:none;
+        margin-right: 3rem;
+    }
+    &__main{
+        display:flex;
+        @include tablet-and-desktop{
+        }
+        @include desktop{
+            margin-left: 0;
+        }
+    }
+    &__header{
+        @include section_header--desktop;
+        color:$silver;
+        font-size: 1rem;
+        margin-top:1.5rem;
+        letter-spacing: 1px;
+    }
+    &__textdiv{
+        width:70%;
+        margin-left:1.5rem;
+    }
+    &__image{
+        margin-top:1.5rem;
+        width:150px;
+        height:5.5rem;
+        border-radius: 5px;   
+    }
+   &__title{
+    margin-top:1.5rem;
+    @include subheader--mobile;
+    @include tablet-and-desktop{
+        white-space: wrap;
+    }
+    @include desktop{
+        @include subheader--desktop;
+        margin-top:1.5rem;
+     
+    }
+   }
+   &__channel{
+    @include subheader--mobile;
+@include desktop{
+    @include body--desktop;
+}
+}
+
+}
