@@ -5,16 +5,19 @@
 
 .Details{
  padding-left:1.5rem;
- padding-right:1.5rem;
+ padding-right: 1.5rem;
  @include desktop{
- margin-left: 5rem;
+ margin-left: 3rem;
+ padding-right: 0;
+ padding-left:1.5rem;
+
  }
  &__title{
   @include page_header--mobile;
  color:$brainflix-darkblack;
   padding-top:2rem;
   padding-bottom:$padding_bwcomp--mobile;
-  border-bottom:3px solid $mercury;
+  border-bottom:0.1875rem solid $mercury;
  @include tablet-and-desktop{
     @include page_header--desktop;
   border-bottom: none;
@@ -54,19 +57,20 @@ margin-right: $padding_bheadline--desktop;
         padding-top:$padding_bwcomp--mobile;
     }
     &__description{
-        border-top:3px solid $mercury;
+        border-top:0.1875rem solid $mercury;
         padding-top: $padding_bheadline--mobile;
         @include body--mobile;
         color:$brainflix-darkblack;
-        letter-spacing: 1px;
+        letter-spacing: 0.0625rem;
         @include tablet-and-desktop{
             @include body--desktop;
-        letter-spacing: 1px;
+        letter-spacing: 0.0625rem;
 
         }
         @include desktop{
             @include body--desktop;
-        letter-spacing: 1px;
+           padding-top:2.5rem;
+           letter-spacing: 0.0625rem;
 
         }
     }
@@ -103,15 +107,21 @@ margin-right: $padding_bheadline--desktop;
     &__subelement2{
         display:flex;
         flex-direction: row;
+       @include desktop{
+        margin-right:1rem;
+       }
     }
+    
     &__view-icon{
-        width:25px;
+        width:1.5625rem;
         margin-right:0.5rem;
         margin-top:1rem;
     }
     &__likes-icon{
-        width:23px;
+        width:1.4375rem;
         margin-right:0.8rem;
         margin-top:1rem;
     }
  }
+
+

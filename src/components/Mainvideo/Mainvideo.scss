@@ -3,40 +3,42 @@
 @use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/typography";
 
-.video{
-   margin-top:3rem;
-   margin-top: 2rem;
-   //  margin: auto;
-    background-color: $brainflix-darkblack;
-    width:100%;
-    height: auto;
-    overflow:hidden;
-    position: relative;
-    background-position: center;
 
-   
-&__poster{
-    max-width:100%;
-    margin-top:10rem;
-    height: auto;
-    margin: 0 auto;  
- background-position: center;
- display: block;
- border:none;
- @include tablet-and-desktop{
-    max-width:90%; 
-    height: auto;
-    margin: 0 auto;  
-    border:none;
+.video {
+   position: relative;
+   width: 100%;
+   padding-top: 56.25%; 
+ 
+   .video__div {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background:$brainflix-black;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+ 
+   .video__poster {
+     width: 100%;
+     height: 100%;
+     object-fit: cover; 
+   }
+   .video__div video::-webkit-media-controls-timeline {
+     height: 3px; 
+     background-color:$brainflix-darkblack; 
+     border-radius: 5px; 
+   }
+   .video__div video::-webkit-media-controls-current-time-display,
+   .video__div video::-webkit-media-controls-time-remaining-display {
+     color: $white; 
+   }
  }
- @include desktop{
-    max-width:100%;
-    height: 1000px;
-    margin: 0 auto;  
-    border:none;
-    display: block;
- }
-}
-}
+ 
+
+
+
 
 

@@ -6,6 +6,7 @@ const NextVideos=({nextVideos,onVideoClick})=>{
     if (!NextVideos || !Array.isArray(nextVideos)) {
         return null;
       }
+      
     return(
         <div className="nextVideos">
             <h2 className="nextVideos__header">Next videos</h2>
