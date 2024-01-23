@@ -10,9 +10,15 @@
  align-items: flex-start;
  text-align: center;
  margin-right:1rem;
+ padding-bottom: 2rem;
+
 @include tablet-and-desktop{
   flex-direction: row;
   margin-top:2rem;
+  padding-bottom: 0.7rem;
+}
+@include desktop{
+  padding-bottom: 2rem;
 }
  &__logo-container {
     display: flex;
@@ -64,24 +70,24 @@
     }
    }
    &__search-input {
-    padding: 20px;
-    border: 1px solid $mercury;
-    border-radius: 4px;
-    height:25px;
-    width: 260px; 
+    padding: 1.25rem;
+    border: 0.0625rem solid $mercury;
+    border-radius: 0.25rem;
+    height:1.5625rem;
+    width: 16.25rem; 
     @include tablet-and-desktop{
     margin-left: 3rem;
     }
     @include desktop{
       margin-left: 23rem;
-      padding: 30px;
-      width:330px;
+      padding: 1.875rem;
+      width:20.625rem;
       }
   }
   &__search {
     display: flex;
    justify-content:flex-end;
-    margin-left:30px;
+    margin-left:1.875rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -108,10 +114,10 @@
      }
    }
   &__search-icon {
-    height: 20px;
+    height: 1.25rem;
     margin-right:5rem;
     position: absolute;
-    right: 180px; 
+    right: 11.25rem; 
     cursor: pointer;
 
     @include tablet-and-desktop{
@@ -126,26 +132,27 @@
     background-color:$brainflix-blue;
     color: $white;
     width: 85%;
-    padding-left:32px;
-    padding-right:32px;
-    height: 40px;
-    border-radius:4px;
+    padding-left:2rem;
+    padding-right:2rem;
+    height: 2.5rem;
+    border-radius:0.25rem;
     margin-left:2rem;
     z-index:0;
     position:relative; 
     overflow: hidden; 
     @include tablet-and-desktop {
-      width: 150px;
+      width: 9.375rem;
       margin-left:0;
       z-index:0;
     }
     @include desktop {
-      width: 185px;
+      width:11.5625rem;
       margin-left:0;
-      height: 60px;
+      height: 3.75rem;
       z-index:0;
     }
   } 
 }
+
 
   

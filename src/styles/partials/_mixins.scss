@@ -1,3 +1,4 @@
+
 @use "../partials/variables" as *;
 
 @mixin tablet-and-desktop {
@@ -75,44 +76,46 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; 
+    max-width: 75rem; 
     margin: 0 auto;
   }
   // Input base mixin
   @mixin input-base {
     background-color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     padding: 0.5rem 1rem;
     font-size: 1rem; 
     outline: none; 
   
     &:focus {
-      border: 1px solid $primary-color; 
+      border: 0.0625rem solid $primary-color; 
     }
   }
   @mixin button-base {
     display: inline-block;
     padding: 0.5rem 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     cursor: pointer;
     text-align: center;
     font-weight: bold;
     transition: background-color 0.2s ease-in-out;
   
     &:hover {
-      background-color: darken($brainflix-darkblue, 10%); // Hover effect
+      background-color: darken($brainflix-darkblue, 10%); 
     }
   }
   @mixin logo_person{
-      height: 40px;
-      width:40px;
+      height: 2.5rem;
+      width:2.5rem;
       border-radius: 50%;
       @include desktop{
-        height: 60px;
-      width:60px;
+        height: 3.75rem;
+      width:3.75rem;
       border-radius: 50%;
       }
   }
+
+
   

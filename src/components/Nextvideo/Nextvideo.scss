@@ -1,3 +1,4 @@
+
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/resets" ;
 @use "../../styles/partials/mixins" as *;
@@ -5,17 +6,22 @@
 
 .nextVideos{
     margin:1.5rem;
-    border-top:3px solid $mercury;
+    border-top:0.1875rem solid $mercury;
     @include desktop{
         border-top:none;
-        margin-right: 3rem;
+        // margin-right: 3rem;
+        margin:1.5rem;
     }
     &__main{
         display:flex;
         @include tablet-and-desktop{
+            max-width: 50%; 
+            margin-left:1.5rem;
         }
         @include desktop{
             margin-left: 0;
+            max-width: 100%;
+            margin-right:0 ;
         }
     }
     &__header{
@@ -23,17 +29,28 @@
         color:$silver;
         font-size: 1rem;
         margin-top:1.5rem;
-        letter-spacing: 1px;
+        letter-spacing: 0.0625rem;
+        @include tablet-and-desktop{
+            margin-left:1.5rem;
+        }
     }
     &__textdiv{
         width:70%;
         margin-left:1.5rem;
+        @include tablet-and-desktop{
+            width:30%;
+        }
+        @include desktop{
+        padding-right:0;
+        width:100%;
+
+        }
     }
     &__image{
         margin-top:1.5rem;
-        width:150px;
+        width:9.375rem;
         height:5.5rem;
-        border-radius: 5px;   
+        border-radius: 0.3125rem;   
     }
    &__title{
     margin-top:1.5rem;
@@ -44,7 +61,7 @@
     @include desktop{
         @include subheader--desktop;
         margin-top:1.5rem;
-     
+        white-space: wrap;
     }
    }
    &__channel{
@@ -53,5 +70,6 @@
     @include body--desktop;
 }
 }
-
 }
+
+

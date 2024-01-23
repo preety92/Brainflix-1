@@ -15,7 +15,7 @@
     margin-top:1.5rem;
     color:$brainflix-black;
     @include page_header--mobile;
-    font-size:18px;
+    font-size:1.125rem;
     @include desktop{
         max-width:60%;
     }
@@ -35,7 +35,10 @@
     flex-direction: row;
    }
    &__details{
-    border-top:3px solid $mercury;
+    border-top:0.1875rem solid $mercury;
+    @include desktop{
+        padding:1rem;
+    }
     
    }
    &__form--imgtext{
@@ -47,7 +50,7 @@
     @include label_button--mobile;
     font-weight: 700;
     margin-left:4.3rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     color:$silver;
     @include desktop{
         margin-left:5rem;
@@ -74,10 +77,10 @@
 margin-top: 0.5rem;
 height:7rem;
 width:17rem;
- border:3px solid $mercury;
+ border:0.1875rem solid $mercury;
  padding:0.2rem;
  margin-left:1rem;
- border-radius: 4px;
+ border-radius: 0.25rem;
  @include section_header--desktop; 
  @include tablet-and-desktop{
     height:3rem;
@@ -91,13 +94,14 @@ width:17rem;
  }
    }
   &__form-button{
+    position: relative;
   padding:0.8rem;
 width:81%;
   margin-bottom:1rem;
   border:none;
  color:$white;
  background-color: $brainflix-blue;
- border-radius: 4px;
+ border-radius: 0.25rem;
  margin-top:1rem;
  @include section_header--mobile;
  font-size:1rem;
@@ -120,26 +124,21 @@ margin-top:0.5rem;
  }
   }
    &__upload-icon{
-    position:absolute;
-    z-index:9999;
-    top:66.3rem;
-    left:6.9rem;
-    @include tablet-and-desktop{
-     position:absolute;
-     z-index:9999;
-     left:37.1rem;
-     top:54.8rem;
+    position: absolute;
+    z-index: 2; 
+    top: 50%; 
+    right: 14rem; 
+    transform: translateY(-50%); 
+    @include tablet-and-desktop {
+      right: 6rem; 
     }
-    @include desktop{
-     position:absolute;
-     z-index:9999;
-     left:44rem;
-     top:93.5rem;
+    @include desktop {
+      right: 7rem; 
     }
    }
    
    &__underline{
-    height:2px;
+    height:0.125rem;
     width:100%;
     color:$brainflix-black;
    }
@@ -175,8 +174,8 @@ margin-top:0.5rem;
 &__name{
     @include section_header--mobile;
     font-weight:700;
-    letter-spacing: 0.5px;
-    font-size: 15px;
+    letter-spacing: 0.0313rem;
+    font-size: 0.9375rem;
     white-space: nowrap;
     overflow: hidden;  
     @include tablet-and-desktop{
@@ -198,6 +197,7 @@ margin-top:0.5rem;
     @include desktop{
         @include body--desktop;
         margin-left:5rem;
+        margin-right:1.5rem;
     }
 }
 &__timestamp{
@@ -230,6 +230,7 @@ color:$silver;
     }
     }
 }
+
 
   
   

@@ -6,7 +6,16 @@
     @include desktop{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
 }
-    
+.App__flex2{
+    margin-right:1rem;
+    padding-right:1rem ;
+    @include desktop{
+        border: 0.1875rem solid $mercury;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+   } 
 }
+
