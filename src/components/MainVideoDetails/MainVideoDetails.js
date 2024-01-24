@@ -3,7 +3,7 @@ import "./MainVideoDetails.scss";
 import viewIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 import CommentsSection from "../Comments/Comments";
-import NextVideos from "../Nextvideo/Nextvideo";
+
 
 
 const MainVideoDetail=({videoDetails})=>{

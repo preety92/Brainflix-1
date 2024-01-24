@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import videoData from "../src/Data/videos.json";
 import videoDetailsData from '../src/Data/video-details.json';
-import Header from './components/Header/Header';
 import './App.scss';
-import NextVideos from './components/Nextvideo/Nextvideo';
-import MainVideo from './components/Mainvideo/Mainvideo';
-import MainVideoDetail from './components/MainVideoDetails/MainVideoDetails';
+import HomePage from './pages/HomePage';
+import UploadPage from './pages/UploadPage';
+
+
 
 const App = () => {
   const [mainVideo, setMainVideo] = useState({});
@@ -28,18 +29,22 @@ const App = () => {
   };
 
   return (
+
+    <Router>
     <div>
-      <Header />
-      <MainVideo videoDetails={mainVideo} />
-      <div className='App__main'>
-        <div className='App__flex1'>
-          <MainVideoDetail videoDetails={mainVideo} />
-        </div>
-        <div className='App__flex2'>
-          <NextVideos nextVideos={nextVideos} onVideoClick={handleNextVideoClick} mainVideoId={mainVideo.id} />
-        </div>
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={<HomePage mainVideo={mainVideo} nextVideos={nextVideos} handleNextVideoClick={handleNextVideoClick} />}
+        />
+        <Route
+          path="/video/:videoId" 
+          element={<UploadPage />}
+        />
+        console.log(videoId);
+      </Routes>
     </div>
+  </Router>
   );
 };
 
