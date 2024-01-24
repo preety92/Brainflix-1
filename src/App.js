@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import videoData from "../src/Data/videos.json";
 import videoDetailsData from '../src/Data/video-details.json';
@@ -20,11 +19,12 @@ const App = () => {
   const handleNextVideoClick = (videoId) => {
     const selectedVideoDetails = videoDetailsData.find((video) => video.id === videoId);
 
-    setMainVideo(selectedVideoDetails);
-
     setNextVideos((prevNextVideos) => {
-      return [...prevNextVideos, mainVideo].filter((video) => video.id !== videoId);
+      const filteredNextVideos = prevNextVideos.filter((video) => video.id !== mainVideo.id);
+      return [...filteredNextVideos, mainVideo];
     });
+
+    setMainVideo(selectedVideoDetails);
   };
 
   return (
@@ -36,7 +36,7 @@ const App = () => {
           <MainVideoDetail videoDetails={mainVideo} />
         </div>
         <div className='App__flex2'>
-          <NextVideos nextVideos={nextVideos} onVideoClick={handleNextVideoClick} />
+          <NextVideos nextVideos={nextVideos} onVideoClick={handleNextVideoClick} mainVideoId={mainVideo.id} />
         </div>
       </div>
     </div>
@@ -44,6 +44,12 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+
 
 
 
