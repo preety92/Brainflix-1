@@ -1,0 +1,214 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/resets" ;
+@use "../styles/partials/mixins" as *;
+@import "../styles/partials/typography";
+
+.upload{
+     width: 100%;
+    box-sizing: border-box;
+    padding: 0; 
+    @include tablet-and-desktop{
+        padding-left:0;
+        padding-right:0;
+        padding-top:0;
+    }
+  
+    &__title{
+        border-top:0.1875rem solid $mercury;
+        margin-left:0;
+        padding-left:1.5rem;
+        padding-right:0;
+        border-width: 100%;
+        padding-bottom: $padding_bwcomp--mobile;
+        padding-top:$padding_bheadline--mobile;
+        @include page_header--mobile;
+        @include tablet-and-desktop{
+             padding-left:1.5rem;
+            border-width: 80%;
+        }
+    }
+    &__inline{
+        @include desktop{
+            display: flex;
+            justify-content:flex-start;
+            align-items:flex-start ;
+            margin-left: 1.5rem;
+            margin-right: 0;
+            gap:0;
+        }
+    }
+    &__inline2{
+        @include desktop{
+            width: 100%;
+            margin-left: 0;
+            margin-right: 1.5rem;
+        }
+        
+    }
+    &__inline1{
+        @include desktop{
+            width: 80%;
+            margin-left:5rem;
+           
+        }
+        
+    }
+  
+    &__image{
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        margin-top:$padding_bwcomp--mobile;
+        margin-bottom:$padding_bwcomp--mobile;
+        width: 100%;
+        height: auto;
+       border-radius:20px;
+        @include tablet-and-desktop{
+            margin-left:1.5rem;
+            width: 30%;
+            margin-right:1.5rem;
+            margin-top:0;
+        }
+        @include desktop{
+            width: 80%;
+            margin-right: 0; 
+            margin-top: 0;
+        }
+    }
+    &__label0{
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        margin-bottom:2rem;
+        @include subheader--mobile;
+        letter-spacing: 0.0625rem;
+        color:$silver;
+        font-weight: 700;
+        @include tablet-and-desktop{
+            display:block;
+            margin-left:1.5rem;
+            margin-right:1.5rem;
+            margin-bottom:0;
+            border-top:0.125rem solid $mercury;
+            padding-top:$padding_bwcomp--mobile;
+            
+        }
+    }
+    &__label{
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+margin-bottom:2rem;
+@include subheader--mobile;
+letter-spacing: 0.0625rem;
+color:$silver;
+font-weight: 700;
+@include tablet-and-desktop{
+    display:block;
+    margin-left:1.5rem;
+    margin-right:1.5rem;
+    margin-bottom:0;
+}
+
+    }
+    &__input{
+        width: 92%;
+        margin-left:1rem;
+        margin-top:$padding_bwcomp--mobile;
+        margin-bottom: $padding_bwcomp--mobile;
+        padding: 1.25rem;
+        border:0.1875rem solid $mercury;
+        border-radius: 0.25rem;
+        height:1.5625rem;
+        @include subheader--mobile;
+        color:black;
+        @include tablet-and-desktop{ 
+            margin-left:1.5rem;
+            margin-right:1.5rem;
+            width: 92%;
+            margin-top:0;
+        }
+        @include desktop{
+             
+        } 
+    }
+    &__textarea{
+        width: 92%;
+        margin-left:1rem;
+        margin-top:$padding_bwcomp--mobile;
+        margin-bottom: $padding_bwcomp--mobile;
+        border:0.1875rem solid $mercury;
+ padding:1.25rem;
+ height:7rem;
+ border-radius: 0.25rem;
+ @include section_header--desktop;
+        @include tablet-and-desktop{
+            width: 92%;  
+            height:7rem;
+            margin-left:1.5rem;
+            margin-right:1.5rem;
+            margin-top:0;
+       
+        }
+        @include desktop{
+           
+        } 
+    }
+
+    &__buttons{
+        width: 92%;
+        margin-left:1rem;
+        display:flex;
+        flex-direction: column;
+@include tablet-and-desktop{
+display: flex;
+flex-direction:row-reverse;
+justify-content: flex-end;
+margin-left:1.5rem;
+margin-right:1.5rem;
+width:40%;
+float:right;
+margin-bottom:2rem;
+}
+@include desktop{
+    justify-content: flex-end;
+    }
+    }
+    &__button1{
+        @include button-base; 
+        margin-top: $padding_bwcomp--mobile;
+        background-color:$brainflix-blue;
+        color: $white;
+        width: 100%;
+        padding-left:2rem;
+        padding-right:2rem;
+        height: 3rem;
+        border-radius:0.25rem;
+        z-index:0;
+        position:relative; 
+        overflow: hidden; 
+    }
+    &__icon{
+            position:absolute;
+             z-index:9999;
+             top:49.2rem;
+             left:2.1rem;
+             @include tablet-and-desktop{
+                z-index:9999;
+                left:37rem;
+                top:36.6rem;
+             }
+    }
+    &__button2{
+        @include button-base; 
+        margin-top: $padding_bwcomp--mobile;
+        background-color:$white;
+        color: $brainflix-blue;
+        width: 100%;
+        height: 2.5rem;
+        border-radius:0.25rem;
+        z-index:0;
+        position:relative; 
+        overflow: hidden; 
+    }
+}
+
+
+  

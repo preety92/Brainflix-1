@@ -1,21 +1,34 @@
 import React from 'react';
-// import './UploadVideo.scss'; // Create a new CSS file for styling
+import "./UploadPage.scss";
+import Thumbnail from "../assets/Images/Upload-video-preview.jpg";
+import UploadIcon from "../assets/Icons/publish.svg";
+import Header from '../components/Header/Header';
 
 const UploadVideo = () => {
   return (
-    <div className="upload-video">
-      <h1 className="upload-video__title">Upload Video</h1>
-      <label className="upload-video__label">Video Thumbnail</label>
-      <img className="upload-video__image" src="" alt="Video Thumbnail" />
-      <label className="upload-video__label">Title Your Video</label>
-      <input className="upload-video__input" type="text" placeholder="Enter video title" />
-      <label className="upload-video__label">Description</label>
-      <textarea className="upload-video__textarea" placeholder="Enter video description"></textarea>
-      <div className="upload-video__buttons">
-        <button className="upload-video__button">Publish</button>
-        <button className="upload-video__button">Cancel</button>
+    <>
+    <Header/>
+    <div className="upload">
+      <h1 className="upload__title">Upload Video</h1>
+      <label className="upload__label0">Video Thumbnail</label>
+     <div className='upload__inline'>
+     <div className='upload__inline1'>
+     <img className="upload__image" src={Thumbnail} alt="Video Thumbnail" />
+     </div>
+     <div className='upload__inline2'>
+     <label className="upload__label">Title Your Video</label>
+      <input className="upload__input" type="text" placeholder="Add a title to your video" />
+      <label className="upload__label">Add a video Description</label>
+      <textarea className="upload__textarea" placeholder="Add a description to your video"></textarea>
+     </div>
+     </div>
+      <div className="upload__buttons">
+        <button className="upload__button1">Publish</button>
+        <img src={UploadIcon} alt="publish Icon" className="upload__icon" />
+        <button className="upload__button2">Cancel</button>
       </div>
     </div>
+    </>
   );
 };
 
