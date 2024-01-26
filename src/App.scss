@@ -1,21 +1,2 @@
-@use "./styles/partials/variables" as *;
-@use "./styles/partials/resets" ;
-@use "./styles/partials/mixins" as *;
-@import "./styles/partials/typography";
-.App__main{
-    @include desktop{
-    display:flex;
-    flex-direction: row;
-}
-.App__flex2{
-    margin-right:1rem;
-    padding-right:1rem ;
-    @include desktop{
-        border: 0.1875rem solid $mercury;
-        margin-right: 0;
-        padding-right: 0;
-    }
 
-   } 
-}
 

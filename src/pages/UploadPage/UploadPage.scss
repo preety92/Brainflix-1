@@ -1,7 +1,7 @@
-@use "../styles/partials/variables" as *;
-@use "../styles/partials/resets" ;
-@use "../styles/partials/mixins" as *;
-@import "../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/resets" ;
+@use "../../styles/partials/mixins" as *;
+@import "../../styles/partials/typography";
 
 .upload{
      width: 100%;

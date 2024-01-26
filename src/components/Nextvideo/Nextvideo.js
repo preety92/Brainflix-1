@@ -1,14 +1,13 @@
-import React from "react";
-import "./Nextvideo.scss";
+import React from 'react';
+import './NextVideo.scss';
 
 const NextVideos = ({ nextVideos, onVideoClick, mainVideoId }) => {
   if (!nextVideos || !Array.isArray(nextVideos)) {
     return null;
   }
   const filteredNextVideos = nextVideos.filter((video) => video.id !== mainVideoId);
-
   return (
-    <div className="nextVideos">
+    <section className="nextVideos">
       <h2 className="nextVideos__header">Next videos</h2>
       {filteredNextVideos.map((video) => (
         <div className="nextVideos__main" key={video.id} onClick={() => onVideoClick(video.id)}>
@@ -21,8 +20,10 @@ const NextVideos = ({ nextVideos, onVideoClick, mainVideoId }) => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
 export default NextVideos;
+
+

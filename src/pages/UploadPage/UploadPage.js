@@ -1,14 +1,14 @@
 import React from 'react';
 import "./UploadPage.scss";
-import Thumbnail from "../assets/Images/Upload-video-preview.jpg";
-import UploadIcon from "../assets/Icons/publish.svg";
-import Header from '../components/Header/Header';
+import Thumbnail from "../../assets/Images/Upload-video-preview.jpg";
+import UploadIcon from "../../assets/Icons/publish.svg";
+import Header from '../../components/Header/Header';
 
 const UploadVideo = () => {
   return (
     <>
-    <Header/>
-    <div className="upload">
+ <Header/>
+    <section className="upload">
       <h1 className="upload__title">Upload Video</h1>
       <label className="upload__label0">Video Thumbnail</label>
      <div className='upload__inline'>
@@ -27,7 +27,7 @@ const UploadVideo = () => {
         <img src={UploadIcon} alt="publish Icon" className="upload__icon" />
         <button className="upload__button2">Cancel</button>
       </div>
-    </div>
+    </section>
     </>
   );
 };
