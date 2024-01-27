@@ -11,6 +11,10 @@
  text-align: center;
  margin-right:1rem;
  padding-bottom: 2rem;
+ &.has-input {
+       
+  display: none; 
+}
 
 @include tablet-and-desktop{
   flex-direction: row;

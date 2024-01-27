@@ -186,12 +186,18 @@ margin-bottom:2rem;
     &__icon{
             position:absolute;
              z-index:9999;
-             top:49.2rem;
+             top:51.2rem;
              left:2.1rem;
              @include tablet-and-desktop{
                 z-index:9999;
                 left:37rem;
-                top:36.6rem;
+                top:37.4rem;
+             }
+             @include desktop{
+                z-index:9999;
+                left:63rem;
+                top:31.6rem;
+                position:absolute;
              }
     }
     &__button2{
