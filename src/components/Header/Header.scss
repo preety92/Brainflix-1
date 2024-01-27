@@ -26,6 +26,11 @@
     margin-left:8rem;
     margin-top:1rem;
     margin-bottom:1rem;
+    &:focus,
+    &:active {
+      outline: none;
+      outline-color: none;
+    }
     @include tablet-and-desktop{
       align-items: flex-start;
       margin-left:2rem;
@@ -38,15 +43,25 @@
   &__logo{
     justify-content:center;
     width:7.5rem;
+    &:focus,
+    &:active {
+      outline: none;
+      outline-color: none;
+    }
     @include tablet-and-desktop{
       width:7.5rem;
-      height:1.5625rem;
+      height: auto; 
     }
     @include desktop{
       width:10rem;
       height:1.5625rem;
     }
+    &:focus,
+  &:active {
+    outline: none;
+    outline-color: none;
   }
+    }
   &__logo1 {
    @include logo_person;
    display:block;

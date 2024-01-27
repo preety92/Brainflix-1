@@ -1,15 +1,14 @@
-
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/resets" ;
 @use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/typography";
 
+  
 .nextVideos{
     margin:1.5rem;
     border-top:0.1875rem solid $mercury;
     @include desktop{
         border-top:none;
-        // margin-right: 3rem;
         margin:1.5rem;
     }
     &__main{

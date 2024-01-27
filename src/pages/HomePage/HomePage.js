@@ -9,54 +9,43 @@ import NextVideos from '../../components/NextVideo/NextVideo';
 const HomePage = () => {
   const [mainVideo, setMainVideo] = useState({});
   const [nextVideos, setNextVideos] = useState([]);
-  const { videoId } = useParams();
+  const { videoId } = useParams(); // Get the videoId from the URL
 
   useEffect(() => {
     const fetchVideoData = async () => {
       try {
-        const mainVideoResponse = await fetch(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=fae8f5da-718b-4873-995f-e035547f0e06`);
-        const mainVideoData = await mainVideoResponse.json();
+       
+        if (videoId) {
+          const mainVideoResponse = await fetch(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=fae8f5da-718b-4873-995f-e035547f0e06`);
+          const mainVideoData = await mainVideoResponse.json();
+          setMainVideo(mainVideoData);
+        } else {
+          // Fetch default main video details if no videoId is present
+          const mainVideoResponse = await fetch(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=fae8f5da-718b-4873-995f-e035547f0e06`);
+          const mainVideoData = await mainVideoResponse.json();
+          setMainVideo(mainVideoData);
+        }
         const nextVideosResponse = await fetch('https://project-2-api.herokuapp.com/videos?api_key=fae8f5da-718b-4873-995f-e035547f0e06');
         const nextVideosData = await nextVideosResponse.json();
-        setMainVideo(mainVideoData);
         setNextVideos(nextVideosData);
-      } 
-      catch (error) 
-      {
+      } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
-  
     fetchVideoData();
   }, [videoId]);
 
-  const handleNextVideoClick = async (videoId) => {
-    try {
-      const selectedVideoResponse = await fetch(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=fae8f5da-718b-4873-995f-e035547f0e06`);
-      const selectedVideoDetails = await selectedVideoResponse.json();
-
-     
-      setNextVideos((prevNextVideos) => {
-        const filteredNextVideos = prevNextVideos.filter((video) => video.id !== mainVideo.id);
-        return [...filteredNextVideos, mainVideo];
-      });
-
-      setMainVideo(selectedVideoDetails);
-    } catch (error) {
-      console.error('Error fetching next video details:', error);
-    }
-  };
   return (
     <div>
       <Header />
       <MainVideo videoDetails={mainVideo} />
-      <div className='App__main'>
-        <div className='App__flex1'>
+      <div className='Details__wrapper'>
+        <div className='Details__wrapper--row'>
           <MainVideoDetail videoDetails={mainVideo} />
         </div>
-        <div className='App__flex2'>
-          <NextVideos nextVideos={nextVideos} onVideoClick={handleNextVideoClick} mainVideoId={mainVideo.id} />
+        <div className='Details__wrapper--column'>
+          <NextVideos nextVideos={nextVideos} mainVideoId={mainVideo.id} />
         </div>
       </div>
     </div>
@@ -64,6 +53,7 @@ const HomePage = () => {
 };
 
 export default HomePage;
+ 
 
 
 

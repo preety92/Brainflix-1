@@ -2,16 +2,19 @@
 @use "../../styles/partials/mixins" as * ;
 @use "../../styles/partials/resets" ;
 @import "../../styles/partials/variables";
-.App__main{
+.Details__wrapper{
     @include desktop{
     display:flex;
     flex-direction: row;
 }
-.App__flex2{
+&--row{
+    max-width:70%;
+}
+&__wrapper--column{
     margin-right:1rem;
     padding-right:1rem ;
     @include desktop{
-        border: 0.1875rem solid $mercury;
+        border: 2rem solid $mercury;
         margin-right: 0;
         padding-right: 0;
     }

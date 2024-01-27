@@ -18,6 +18,8 @@ const App = () => {
             path="/upload/:uploadId" 
             element={<UploadVideo />}
           />
+           <Route path="/video/:videoId" element={<HomePage />}
+           />
         </Routes>
       </div>
     </Router>
