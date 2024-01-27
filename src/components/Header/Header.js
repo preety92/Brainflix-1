@@ -19,7 +19,7 @@ const Header = () => {
         <img src={searchIcon} alt="Search Icon" className="header__search-icon" />
         <img src={presonImage} alt="persons_image" className="header__logo1" />
       </div>
-      <Link to="/upload"> 
+      <Link to="/upload/:uploadId"> 
         <button className="header__upload-button">UPLOAD</button>
         <img src={upload} alt="upload Icon" className="header__upload-icon" />
       </Link>
