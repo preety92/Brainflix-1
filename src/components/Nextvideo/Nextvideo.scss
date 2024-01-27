@@ -13,6 +13,7 @@
     }
     &__main{
         display:flex;
+        
         @include tablet-and-desktop{
             max-width: 50%; 
             margin-left:1.5rem;
@@ -53,7 +54,11 @@
     }
    &__title{
     margin-top:1.5rem;
-    @include subheader--mobile;
+    a {
+        text-decoration: none;
+        @include subheader--mobile;
+
+      }
     @include tablet-and-desktop{
         white-space: wrap;
     }
