@@ -106,12 +106,10 @@
     }
   }
   @mixin logo_person{
-      height: 2.25rem;
-      width:2.4rem;
+      height: 2.5rem;
+      width:2.5rem;
       border-radius: 50%;
       @include desktop{
-        height: 2.5rem;
-      width:2.5rem;
       border-radius: 50%;
       }
   }

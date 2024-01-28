@@ -12,6 +12,10 @@
         padding-right:0;
         padding-top:0;
     }
+    // @include desktop{
+        // border-bottom:1px solid $mercury;
+    //    border-width: 50%;
+    // }
   
     &__title{
         border-top:0.1875rem solid $mercury;
@@ -26,6 +30,10 @@
              padding-left:1.5rem;
             border-width: 80%;
         }
+        @include desktop{
+            padding-left:7rem;
+
+       }
     }
     &__inline{
         @include desktop{
@@ -53,13 +61,12 @@
         } 
     }
     &__image{
-        padding-left:1.5rem;
-        padding-right:1.5rem;
         margin-top:$padding_bwcomp--mobile;
         margin-bottom:$padding_bwcomp--mobile;
-        width: 100%;
+        margin-left:$padding_bwcomp--mobile;
+        width: 90%;
         height: auto;
-       border-radius:20px;
+       border-radius:0.3125rem;
         @include tablet-and-desktop{
             margin-left:1.5rem;
             width: 30%;
@@ -70,6 +77,7 @@
             width: 80%;
             margin-right: 0; 
             margin-top: 0;
+            margin-bottom: $padding_bheadline--mobile;
         }
     }
     &__label0{
@@ -82,12 +90,18 @@
         font-weight: 700;
         @include tablet-and-desktop{
             display:block;
-            margin-left:1.5rem;
+            margin-left:1rem;
             margin-right:1.5rem;
             margin-bottom:0;
             border-top:0.125rem solid $mercury;
             padding-top:$padding_bwcomp--mobile;
-            
+            margin-bottom:0.5rem;  
+        }
+        @include desktop{
+            margin-left:7.5rem;
+            padding-left:0rem;
+            margin-right:7rem;
+           
         }
     }
     &__label{
@@ -124,7 +138,8 @@ font-weight: 700;
             margin-top:0;
         }
         @include desktop{
-             
+            margin-right:7rem; 
+            width: 84%; 
         } 
     }
     &__textarea{
@@ -146,7 +161,7 @@ font-weight: 700;
        
         }
         @include desktop{
-           
+            width: 84%; 
         } 
     }
 
@@ -155,18 +170,19 @@ font-weight: 700;
         margin-left:1rem;
         display:flex;
         flex-direction: column;
-@include tablet-and-desktop{
-display: flex;
-flex-direction:row-reverse;
-justify-content: flex-end;
-margin-left:1.5rem;
-margin-right:1.5rem;
-width:40%;
-float:right;
-margin-bottom:2rem;
+       @include tablet-and-desktop{
+      display: flex;
+      flex-direction:row-reverse;
+      justify-content: flex-end;
+     margin-left:1.5rem;
+     margin-right:1.5rem;
+     width:40%;
+     float:right;
+    margin-bottom:2rem;
 }
 @include desktop{
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top:$padding_bheadline--mobile;
     }
     }
     &__button1{
@@ -182,6 +198,11 @@ margin-bottom:2rem;
         z-index:0;
         position:relative; 
         overflow: hidden; 
+        @include desktop{
+            width: 30%;
+            padding-right:0;  
+             
+        }
     }
     &__icon{
             position:absolute;
@@ -195,7 +216,7 @@ margin-bottom:2rem;
              }
              @include desktop{
                 z-index:9999;
-                left:63rem;
+                left:65rem;
                 top:31.6rem;
                 position:absolute;
              }
@@ -211,6 +232,16 @@ margin-bottom:2rem;
         z-index:0;
         position:relative; 
         overflow: hidden; 
+        @include desktop{
+            width: 40%;           
+        }
+    }
+    &__border{
+        @include desktop{
+            border:0.0625rem solid $mercury;  
+            margin-left:7.5rem;
+            margin-right:7.5rem;
+        }
     }
 }
 

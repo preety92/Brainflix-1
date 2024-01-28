@@ -37,6 +37,7 @@ const UploadVideo = () => {
           <button className="upload__button2">Cancel</button>
         </div>
       </section>
+      <div className='upload__border'></div>
     </>
   );
 };
