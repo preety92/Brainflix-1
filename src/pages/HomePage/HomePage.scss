@@ -2,21 +2,21 @@
 @use "../../styles/partials/mixins" as * ;
 @use "../../styles/partials/resets" ;
 @import "../../styles/partials/variables";
-.Details__wrapper{
+.Detail{
     @include desktop{
     display:flex;
     flex-direction: row;
 }
-&--row{
+&__row{
 @include desktop{
     max-width:70%;
 }
 }
-&__wrapper--column{
+&__column{
     margin-right:1rem;
     padding-right:1rem ;
     @include desktop{
-        border: 2rem solid $mercury;
+        max-width:30%;
         margin-right: 0;
         padding-right: 0;
     }

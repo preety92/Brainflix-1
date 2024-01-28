@@ -39,11 +39,11 @@ const HomePage = () => {
     <div>
       <Header />
       <MainVideo videoDetails={mainVideo} />
-      <div className='Details__wrapper'>
-        <div className='Details__wrapper--row'>
+      <div className='Detail'>
+        <div className='Detail__row'>
           <MainVideoDetail videoDetails={mainVideo} />
         </div>
-        <div className='Details__wrapper--column'>
+        <div className='Detail__column'>
           <NextVideos nextVideos={nextVideos} mainVideoId={mainVideo.id} />
         </div>
       </div>

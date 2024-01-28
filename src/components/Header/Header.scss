@@ -27,7 +27,7 @@
  &__logo-container {
     display: flex;
     align-items: center;
-    margin-left:8rem;
+    margin-left:4.5rem;
     margin-top:1rem;
     margin-bottom:1rem;
     &:focus,
@@ -47,6 +47,7 @@
   &__logo{
     justify-content:center;
     width:7.5rem;
+    height:1.5625rem;
     &:focus,
     &:active {
       outline: none;
@@ -70,6 +71,7 @@
    @include logo_person;
    display:block;
    margin-left:0.5rem;
+   background-color:$mercury;
    @include tablet-and-desktop{
     display:none;
    }
@@ -117,7 +119,7 @@
   &__upload-icon{
     position:absolute;
      z-index:9999;
-     top:7.5rem;
+     top:9.8rem;
      left:3.5rem;
      @include tablet-and-desktop{
       position:absolute;
@@ -150,7 +152,7 @@
     @include button-base; 
     background-color:$brainflix-blue;
     color: $white;
-    width: 85%;
+    width: 19rem;
     padding-left:2rem;
     padding-right:2rem;
     height: 2.5rem;

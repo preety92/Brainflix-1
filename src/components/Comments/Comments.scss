@@ -77,11 +77,22 @@
 margin-top: 0.5rem;
 height:7rem;
 width:17rem;
- border:0.1875rem solid $mercury;
  padding:0.2rem;
  margin-left:1rem;
  border-radius: 0.25rem;
+ resize: none; 
  @include section_header--desktop; 
+    border: 0.1875rem solid $mercury; 
+    &:focus {
+      border-color: $brainflix-blue; 
+    }
+    &:valid {
+      border-color: $mercury; 
+    }
+    &:invalid {
+      border-color: red;
+    }
+  
  @include tablet-and-desktop{
     height:3rem;
     width:28rem;
