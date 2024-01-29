@@ -95,7 +95,7 @@
    border-color: $mercury; 
    }
    &:invalid {
-   border-color: red;
+   border-color: $red;
    }
    @include section_header--desktop; 
    @include tablet-and-desktop{
