@@ -7,13 +7,11 @@ import Header from '../../components/Header/Header';
 
 const UploadVideo = () => {
   const navigate = useNavigate();
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
     alert("Your upload was successful!");
     navigate("/");
   };
-
   return (
     <>
       <Header />
@@ -41,6 +39,5 @@ const UploadVideo = () => {
     </>
   );
 };
-
 export default UploadVideo;
 

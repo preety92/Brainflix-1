@@ -20,14 +20,12 @@ const MainVideoDetail = ({ videoDetails }) => {
         console.error('Error fetching data:', error);
       }
     };
-
     fetchVideoDetails();
   }, [videoId]);
 
   if (!selectedVideoDetails) {
     return <div>Loading...</div>; 
   }
-
   const convertTime = new Date(videoDetails.timestamp).toLocaleDateString();
 
   return (
@@ -54,7 +52,6 @@ const MainVideoDetail = ({ videoDetails }) => {
     </section>
   );
 };
-
 export default MainVideoDetail;
 
 

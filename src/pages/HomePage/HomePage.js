@@ -14,7 +14,6 @@ const HomePage = () => {
   useEffect(() => {
     const fetchVideoData = async () => {
       try {
-       
         if (videoId) {
           const mainVideoResponse = await fetch(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=fae8f5da-718b-4873-995f-e035547f0e06`);
           const mainVideoData = await mainVideoResponse.json();
@@ -31,10 +30,8 @@ const HomePage = () => {
         console.error('Error fetching data:', error);
       }
     };
-
     fetchVideoData();
   }, [videoId]);
-
   return (
     <div>
       <Header />
@@ -50,7 +47,6 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default HomePage;
  
 

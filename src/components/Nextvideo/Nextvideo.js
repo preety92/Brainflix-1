@@ -6,7 +6,6 @@ const NextVideos = ({ nextVideos, mainVideoId }) => {
   if (!nextVideos || !Array.isArray(nextVideos)) {
     return null;
   }
-
   const filteredNextVideos = nextVideos.filter((video) => video.id !== mainVideoId);
 
   return (
@@ -28,7 +27,6 @@ const NextVideos = ({ nextVideos, mainVideoId }) => {
     </section>
   );
 };
-
 export default NextVideos;
 
 

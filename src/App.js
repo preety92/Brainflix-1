@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import UploadVideo from "./pages/UploadPage/UploadPage";
 
-
-
 const App = () => {
   return (
     <Router>
@@ -25,7 +23,6 @@ const App = () => {
     </Router>
   );
 };
-
 export default App;
 
 

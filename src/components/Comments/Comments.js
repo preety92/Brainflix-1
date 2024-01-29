@@ -14,7 +14,7 @@ const CommentsSection = ({ comments }) => {
     console.log('New Comment:', newComment);
     setNewComment('');
   };
-
+  
   if (!comments || !Array.isArray(comments)) {
     return null;
   }
