@@ -12,11 +12,6 @@
         padding-right:0;
         padding-top:0;
     }
-    // @include desktop{
-        // border-bottom:1px solid $mercury;
-    //    border-width: 50%;
-    // }
-  
     &__title{
         border-top:0.1875rem solid $mercury;
         margin-left:0;
@@ -51,7 +46,6 @@
             margin-left: 0;
             margin-right: 1.5rem;
         }
-        
     }
     &__inline1{
         @include desktop{
@@ -101,7 +95,6 @@
             margin-left:7.5rem;
             padding-left:0rem;
             margin-right:7rem;
-           
         }
     }
     &__label{
@@ -118,7 +111,6 @@ font-weight: 700;
     margin-right:1.5rem;
     margin-bottom:0;
 }
-
     }
     &__input{
         width: 92%;
@@ -148,23 +140,21 @@ font-weight: 700;
         margin-top:$padding_bwcomp--mobile;
         margin-bottom: $padding_bwcomp--mobile;
         border:0.1875rem solid $mercury;
- padding:1.25rem;
- height:7rem;
- border-radius: 0.25rem;
- @include section_header--desktop;
+       padding:1.25rem;
+       height:7rem;
+       border-radius: 0.25rem;
+       @include section_header--desktop;
         @include tablet-and-desktop{
             width: 92%;  
             height:7rem;
             margin-left:1.5rem;
             margin-right:1.5rem;
             margin-top:0;
-       
         }
         @include desktop{
             width: 84%; 
         } 
     }
-
     &__buttons{
         width: 92%;
         margin-left:1rem;
@@ -200,19 +190,18 @@ font-weight: 700;
         overflow: hidden; 
         @include desktop{
             width: 30%;
-            padding-right:0;  
-             
+            padding-right:0;      
         }
     }
     &__icon{
             position:absolute;
              z-index:9999;
-             top:51.2rem;
+             top:51.7rem;
              left:2.1rem;
              @include tablet-and-desktop{
                 z-index:9999;
                 left:37rem;
-                top:37.4rem;
+                top:38rem;
              }
              @include desktop{
                 z-index:9999;
@@ -232,15 +221,28 @@ font-weight: 700;
         z-index:0;
         position:relative; 
         overflow: hidden; 
+        margin-bottom: 2rem;
+        @include tablet-and-desktop{
+           margin-right:1rem;
+           padding-bottom:1rem; 
+           padding-top:1rem;  
+           height: 3rem;         
+        }
         @include desktop{
-            width: 40%;           
+            width: 30%; 
+            margin-left:2rem;          
         }
     }
     &__border{
+        @include tablet-and-desktop{
+            border:0.0625rem solid $mercury;  
+            margin-left:1.7rem;
+            margin-right:2.3rem;
+        }
         @include desktop{
             border:0.0625rem solid $mercury;  
             margin-left:7.5rem;
-            margin-right:7.5rem;
+            margin-right:6.5rem;
         }
     }
 }

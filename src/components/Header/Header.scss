@@ -21,6 +21,7 @@
 }
 @include desktop{
   margin-right:5rem;
+  padding-bottom: 0;
 }
  &__logo-container {
     display: flex;
@@ -130,18 +131,18 @@
       position:absolute;
       z-index:9999;
       left:60.5rem;
-      top:1.9rem;
+      top:1.8rem;
      }
    }
   &__search-icon {
     height: 1.25rem;
     margin-right:5rem;
     position: absolute;
-    right: 11.25rem; 
+    right: 11.9rem; 
     cursor: pointer;
 
     @include tablet-and-desktop{
-      margin-right:3rem;
+      margin-right:2.2rem;
     }
     @include desktop{
       margin-right:6.5rem;

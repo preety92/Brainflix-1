@@ -10,8 +10,7 @@
  margin-left: 3rem;
  padding-right: 0;
  padding-left:1.5rem;
- border-right: 2px solid $mercury;
-
+ border-right: 0.125rem solid $mercury;
  }
  &__title{
   @include page_header--mobile;
@@ -66,13 +65,11 @@ margin-right: $padding_bheadline--desktop;
         @include tablet-and-desktop{
             @include body--desktop;
         letter-spacing: 0.0625rem;
-
         }
         @include desktop{
             @include body--desktop;
            padding-top:2.5rem;
            letter-spacing: 0.0625rem;
-
         }
     }
     &__flex{
@@ -112,7 +109,6 @@ margin-right: $padding_bheadline--desktop;
         margin-right:1rem;
        }
     }
-    
     &__view-icon{
         width:1.5625rem;
         margin-right:0.5rem;
