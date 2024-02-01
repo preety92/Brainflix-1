@@ -1,3 +1,54 @@
+// import React, { useState } from "react";
+// import presonImage from '../../assets/Images/Mohan-muruge.jpg';
+// import './Comments.scss';
+// import commentIcon from '../../assets/Icons/add_comment.svg';
+
+// const CommentsSection = ({ comments, handleCommentSubmit, handleCommentChange, newComment }) => {
+//   return (
+//     <section className="commentbox">
+//       <h2 className="commentbox__heading1">{comments.length} comments</h2>
+//       <p className="commentbox__heading2">JOIN THE CONVERSATION</p>
+//       <div className="commentbox__form">
+//         <div className="commentbox__form--row">
+//         <div className="commentbox__form--imgdiv">
+//           <img src={presonImage} alt="persons_image" className="commentbox__logo1" />
+//      </div>
+//           <div className="commentbox__form--textdiv">
+//             <textarea
+//               className="commentbox__textarea"
+//               placeholder="Add a new comment"
+//               value={newComment}
+//               onChange={handleCommentChange}
+//             />
+//           </div>
+//         </div>
+//         <div className="commentbox__form--buttondiv">
+//           <button className="commentbox__form-button" onClick={handleCommentSubmit}>
+//             Comment
+//             <img src={commentIcon} alt="comment Icon" className="commentbox__upload-icon" />
+//           </button>
+//         </div>
+//       </div>
+//       <div className="commentbox__container">
+//         {comments.map(comment => (
+//           <div key={comment.id} className="commentbox__div">
+//             <div className="commentbox__details">
+//               <div className="commentbox__name">{comment.name}</div>
+//               <div className="commentbox__timestamp">
+//                 {new Date(comment.timestamp).toLocaleDateString()}
+//               </div>
+//               <div className="commentbox__comment">{comment.comment}</div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default CommentsSection;
+
+
 import React, { useState } from "react";
 import './Comments.scss';
 import presonImage from '../../assets/Images/Mohan-muruge.jpg';

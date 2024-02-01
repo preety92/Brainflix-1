@@ -35,7 +35,7 @@ const Header = () => {
         {isInputFocused ? null : <img src={searchIcon} alt="Search Icon" className="header__search-icon" />}
         <img src={presonImage} alt="persons_image" className="header__logo1" />
       </div>
-      <Link to="/upload/:uploadId"> 
+      <Link to="/upload/"> 
         <button className="header__upload-button">UPLOAD</button>
         <img src={upload} alt="upload Icon" className="header__upload-icon" />
       </Link>
