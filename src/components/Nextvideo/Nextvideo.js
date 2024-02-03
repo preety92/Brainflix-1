@@ -13,8 +13,8 @@ const NextVideos = ({ nextVideos, mainVideoId, handleVideoClick }) => {
       <h2 className="nextVideos__header">Next videos</h2>
       {filteredNextVideos.map((video) => (
         <div key={video.id} className="nextVideos__main" onClick={() => handleVideoClick(video)}>
-          <Link to={`/video/${video.id}`}>
-            <div className="nextVideos__imgdiv">
+          <Link className="nextVideos__imgdiv" to={`/video/${video.id}`}>
+            <div className="nextVideos__div">
               <img className="nextVideos__image" src={video.image} alt={video.title} />
             </div>
             <div className="nextVideos__textdiv">

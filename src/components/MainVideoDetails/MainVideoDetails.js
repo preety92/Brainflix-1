@@ -24,6 +24,13 @@ const MainVideoDetail = () => {
     fetchVideoDetails();
   }, [videoId]);
 
+  const addComment = (newComment) => {
+    setVideoDetails({
+      ...videoDetails,
+      comments: [...videoDetails.comments, newComment],
+    });
+  };
+
   if (!videoDetails) {
     return <div>Loading...</div>;
   }
@@ -50,7 +57,7 @@ const MainVideoDetail = () => {
         </div>
       </div>
       <p className="Details__description">{videoDetails.description}</p>
-      <CommentsSection comments={videoDetails.comments} />
+      <CommentsSection comments={videoDetails.comments} addComment={addComment} />
     </section>
   );
 };

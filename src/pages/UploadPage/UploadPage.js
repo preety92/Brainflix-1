@@ -1,45 +1,34 @@
-import React, { useState, useEffect } from 'react';
+
+
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; 
 import "./UploadPage.scss";
 import Thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import UploadIcon from "../../assets/Icons/publish.svg";
 import Header from '../../components/Header/Header';
 
+
 const UploadVideo = () => {
   const navigate = useNavigate();
-  const [videos, setVideos] = useState([]);
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
 
-  useEffect(() => {
-    fetch('http://localhost:8081/videos')
-      .then(response => response.json())
-      .then(data => setVideos(data))
-      .catch(error => console.error("Error fetching videos:", error));
-  }, []);
-
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
+    try {
+      const videoData = {
+        title: title,
+        description: description,
+        // thumbnail: '../public/Images/image0.jpeg', 
+      };
+      await axios.post('http://localhost:8081/videos', videoData);
 
-    const title = document.getElementById('title').value;
-    const description = document.getElementById('description').value;
-
-    fetch('/videos', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title,
-        description,
-        thumbnail: '/path/to/static/thumbnail.jpg', 
-      }),
-    })
-    .then(response => response.json())
-    .then(data => {
       alert("Your upload was successful!");
       navigate("/");
-    })
-    .catch(error => {
-      console.error("Error:", error);
-    
-    });
+    } catch (error) {
+      console.error('Error uploading video:', error);
+    }
   };
 
   return (
@@ -54,9 +43,9 @@ const UploadVideo = () => {
           </div>
           <div className='upload__inline2'>
             <label className="upload__label">Title Your Video</label>
-            <input className="upload__input" type="text" id="title" placeholder="Add a title to your video" /> 
+            <input className="upload__input" type="text" placeholder="Add a title to your video" value={title} onChange={(e) => setTitle(e.target.value)} />
             <label className="upload__label">Add a video Description</label>
-            <textarea className="upload__textarea" id="description" placeholder="Add a description to your video"></textarea> 
+            <textarea className="upload__textarea" placeholder="Add a description to your video" value={description} onChange={(e) => setDescription(e.target.value)} ></textarea>
           </div>
         </div>
         <div className="upload__buttons">
@@ -71,6 +60,7 @@ const UploadVideo = () => {
 };
 
 export default UploadVideo;
+
 
 // import React from 'react';
 // import { useNavigate } from 'react-router-dom';
