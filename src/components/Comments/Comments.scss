@@ -30,7 +30,7 @@
         flex-direction: row;
     }
    }
-   &__form--row{
+   &__row{
     display:flex;
     flex-direction: row;
    }
@@ -39,7 +39,6 @@
     @include desktop{
         padding:1rem;
     }
-    
    }
    &__form--imgtext{
     @include desktop{

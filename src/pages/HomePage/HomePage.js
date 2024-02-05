@@ -1,53 +1,71 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import "./HomePage.scss"; 
-import Header from '../../components/Header/Header';
-import MainVideo from '../../components/MainVideo/MainVideo';
+import './HomePage.scss';
 import MainVideoDetail from '../../components/MainVideoDetails/MainVideoDetails';
 import NextVideos from '../../components/NextVideo/NextVideo';
-
-const HomePage = () => {
-  const [mainVideo, setMainVideo] = useState({});
+import MainVideo from '../../components/MainVideo/MainVideo';
+import axios from 'axios';
+const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
+function HomePage() {
+  const [mainVideo, setMainVideo] = useState(null);
   const [nextVideos, setNextVideos] = useState([]);
   const { videoId } = useParams(); 
-
   useEffect(() => {
-    const fetchVideoData = async () => {
+    const fetchMainVideoData = async () => {
       try {
-        if (videoId) {
-          const mainVideoResponse = await fetch(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=fae8f5da-718b-4873-995f-e035547f0e06`);
-          const mainVideoData = await mainVideoResponse.json();
-          setMainVideo(mainVideoData);
-        } else {
-          const mainVideoResponse = await fetch(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=fae8f5da-718b-4873-995f-e035547f0e06`);
-          const mainVideoData = await mainVideoResponse.json();
-          setMainVideo(mainVideoData);
-        }
-        const nextVideosResponse = await fetch('https://project-2-api.herokuapp.com/videos?api_key=fae8f5da-718b-4873-995f-e035547f0e06');
-        const nextVideosData = await nextVideosResponse.json();
-        setNextVideos(nextVideosData);
+        const response = await axios.get(
+          `${REACT_APP_SERVER_URL}/videos/${videoId || '84e96018-4022-434e-80bf-000ce4cd12b8'}` 
+        );
+        setMainVideo(response.data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error:', error);
       }
     };
-    fetchVideoData();
-  }, [videoId]);
+    fetchMainVideoData();
+    const fetchNextVideosData = async () => {
+      try {
+        const response = await axios.get(`${REACT_APP_SERVER_URL}/videos`);
+        setNextVideos(response.data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    fetchNextVideosData();
+  }, [videoId]); 
+  const handleVideoClick = (clickedVideo) => {
+    setMainVideo(clickedVideo);
+  };
   return (
     <div>
-      <Header />
-      <MainVideo videoDetails={mainVideo} />
-      <div className='Detail'>
-        <div className='Detail__row'>
-          <MainVideoDetail videoDetails={mainVideo} />
-        </div>
-        <div className='Detail__column'>
-          <NextVideos nextVideos={nextVideos} mainVideoId={mainVideo.id} />
-        </div>
-      </div>
+      {mainVideo && ( 
+        <>
+          <MainVideo videoDetails={mainVideo} />
+          <div className='Detail'>
+            <div className='Detail__row'>
+              <MainVideoDetail videoDetails={mainVideo} />
+            </div>
+            <div className='Detail__column'>
+              <NextVideos
+                nextVideos={nextVideos}
+                mainVideoId={mainVideo.id}
+                handleVideoClick={handleVideoClick}
+              />
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
-};
+}
+
 export default HomePage;
+
+
+
+
+
+
+
  
 
 

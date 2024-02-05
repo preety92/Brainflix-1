@@ -72,7 +72,7 @@ margin-right: $padding_bheadline--desktop;
            letter-spacing: 0.0625rem;
         }
     }
-    &__flex{
+    &__wrapper{
         margin-bottom:$padding_bheadline--mobile;
         display:flex;
         flex-direction:row;
@@ -84,13 +84,13 @@ margin-right: $padding_bheadline--desktop;
             @include section_header--desktop
         }
     }
-    &__flexelement1{
+    &__info{
         @include tablet-and-desktop{
             display:flex;
             flex-direction: row;
         }
     }
-    &__flexelement2{
+    &__social{
         margin-top:1rem;
         @include tablet-and-desktop{
             display:flex;

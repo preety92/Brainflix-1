@@ -1,6 +1,5 @@
 import React from 'react';
 import "./MainVideo.scss";
-
 const MainVideo = ({ videoDetails }) => {
   return (
     <main className='video'>
@@ -11,6 +10,5 @@ const MainVideo = ({ videoDetails }) => {
     </main>
   );
 };
-
 export default MainVideo;
 
