@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './HomePage.scss';
-import Header from '../../components/Header/Header';
 import MainVideoDetail from '../../components/MainVideoDetails/MainVideoDetails';
 import NextVideos from '../../components/NextVideo/NextVideo';
 import MainVideo from '../../components/MainVideo/MainVideo';
@@ -23,20 +22,16 @@ function HomePage() {
         );
         setMainVideo(response.data);
       } catch (error) {
-        console.error('Error fetching main video data:', error);
-       
+        console.error('Error:', error);
       }
     };
-
     fetchMainVideoData();
-
-   
     const fetchNextVideosData = async () => {
       try {
         const response = await axios.get(`${REACT_APP_SERVER_URL}/videos`);
         setNextVideos(response.data);
       } catch (error) {
-        console.error('Error fetching next videos data:', error);
+        console.error('Error:', error);
        
       }
     };
@@ -50,7 +45,6 @@ function HomePage() {
 
   return (
     <div>
-      <Header />
       {mainVideo && ( 
         <>
           <MainVideo videoDetails={mainVideo} />

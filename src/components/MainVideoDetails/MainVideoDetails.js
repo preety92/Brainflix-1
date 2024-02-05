@@ -17,7 +17,7 @@ const MainVideoDetail = () => {
         const response = await axios.get(  videoId ? `http://localhost:8081/videos/${videoId}` : `${REACT_APP_SERVER_URL}/videos/84e96018-4022-434e-80bf-000ce4cd12b8`);
         setVideoDetails(response.data);
       } catch (error) {
-        console.error('Error fetching video details:', error);
+        console.error('Error:', error);
       }
     };
 
