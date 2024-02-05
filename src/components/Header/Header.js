@@ -21,7 +21,6 @@ const Header = () => {
   const handleInputBlur = () => {
     setInputFocused(false);
   };
-
   return (
     <header className="header">
       <div className="header__logo-container">
@@ -44,7 +43,6 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;
 
 

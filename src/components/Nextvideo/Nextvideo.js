@@ -7,7 +7,6 @@ const NextVideos = ({ nextVideos, mainVideoId, handleVideoClick }) => {
     return null;
   }
   const filteredNextVideos = nextVideos.filter((video) => video.id !== mainVideoId);
-
   return (
     <section className="nextVideos">
       <h2 className="nextVideos__header">Next videos</h2>

@@ -5,15 +5,11 @@ import MainVideoDetail from '../../components/MainVideoDetails/MainVideoDetails'
 import NextVideos from '../../components/NextVideo/NextVideo';
 import MainVideo from '../../components/MainVideo/MainVideo';
 import axios from 'axios';
-
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
-
 function HomePage() {
   const [mainVideo, setMainVideo] = useState(null);
   const [nextVideos, setNextVideos] = useState([]);
   const { videoId } = useParams(); 
-
-  
   useEffect(() => {
     const fetchMainVideoData = async () => {
       try {
@@ -32,17 +28,13 @@ function HomePage() {
         setNextVideos(response.data);
       } catch (error) {
         console.error('Error:', error);
-       
       }
     };
-
     fetchNextVideosData();
   }, [videoId]); 
-
   const handleVideoClick = (clickedVideo) => {
     setMainVideo(clickedVideo);
   };
-
   return (
     <div>
       {mainVideo && ( 
@@ -62,7 +54,6 @@ function HomePage() {
           </div>
         </>
       )}
-     
     </div>
   );
 }
